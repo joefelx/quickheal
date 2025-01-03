@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import apiCalls from "../../../core/APICalls";
 import Loader from "../../components/loader"
 import doctorImage from "../../../assets/doctor.png";
+import { FaArrowLeft } from "react-icons/fa"; // Add this import
 import "animate.css";
 
 const LoginComponent = ({ setIsLogin }) => {
@@ -39,6 +40,10 @@ const LoginComponent = ({ setIsLogin }) => {
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-r from-blue-900 to-blue-700">
+      <FaArrowLeft 
+        className="absolute top-4 left-4 text-white text-2xl cursor-pointer hover:scale-110 transition-transform animate__animated animate__fadeInLeft" 
+        onClick={() => navigate('/')}
+      />
       {/* Doctor Image */}
       <div className="md:w-1/2 hidden md:flex items-center justify-center">
         <img
@@ -119,6 +124,7 @@ const RegisterComponent = ({ setIsLogin }) => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loader, setLoader] = useState(false);
   const [error, setError] = useState("");
+  const navigate = useNavigate(); // Add this line
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -152,6 +158,10 @@ const RegisterComponent = ({ setIsLogin }) => {
 
   return (
     <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-r from-blue-900 to-blue-700">
+      <FaArrowLeft 
+        className="absolute top-4 left-4 text-white text-2xl cursor-pointer hover:scale-110 transition-transform animate__animated animate__fadeInRight" 
+        onClick={() => navigate('/')}
+      />
       {/* Doctor Image */}
       <div className="md:w-1/2 hidden md:flex items-center justify-center">
         <img
