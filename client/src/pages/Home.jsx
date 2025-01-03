@@ -1,6 +1,7 @@
 import React from "react";
 import visit from "../assests/visit.jpeg";
 import logo from "../assets/logo.png";
+import FAQSection from "./components/FAQ-Section";
 import { Link } from "react-router-dom";
 function Home() {
   console.log(process.env.REACT_APP_SERVER_URL);
@@ -42,9 +43,18 @@ function Home() {
         </div>
       </div>
 
+      {/* FAQ Section */}
+
+      <div className="mt-12 mb-8 px-6 md:px-20 lg:px-32 xl:px-40 ">
+        <FAQSection />
+      </div>
+
       {/* Footer Section */}
-      <footer className="w-full py-3 bg-gray-700 text-center text-gray-200 text-sm mt-auto bg-transparent">
-        <p>© 2024 QuickHeal. All rights reserved.</p>
+
+      <footer className="w-full py-3 bg-gray-700 text-center text-gray-200 text-sm mt-auto">
+        <div className="border-gray-400 mb-3">
+          <p>© 2025 QuickHeal. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
