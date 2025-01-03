@@ -217,6 +217,19 @@ const RegisterComponent = ({ setIsLogin }) => {
               className="w-full px-4 py-2 mt-1 text-sm border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
             />
           </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-600">
+              Age
+            </label>
+            <input
+              type="number"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              required
+              className="w-full px-4 py-2 mt-1 text-sm border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+            />
+          </div>
+          
           {error && <div className="text-sm text-red-500">{error}</div>}
           <button
             type="submit"
