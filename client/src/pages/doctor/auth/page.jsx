@@ -216,7 +216,6 @@ const RegisterComponent = ({ setIsLogin }) => {
                 
               </option>
               <option value="Cardiology">Cardiology</option>
-              <option value="Cardiology">Cardiology</option>
               <option value="Neurology">Neurology</option>
               <option value="Pediatrics">Pediatrics</option>
               <option value="Orthopedics">Orthopedics</option>
